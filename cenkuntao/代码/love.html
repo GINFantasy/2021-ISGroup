@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>love for you</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        html {
+            background-color: #F3518A;
+            animation: html 4s infinite;
+            transition: 1s;
+        }
+        
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: #F3518A;
+            margin: 200px auto;
+            position: relative;
+            transform: rotate(-45deg);
+            transition: 1s;
+            animation: box3 4s infinite;
+        }
+        
+        .box3::before {
+            content: '';
+            width: 200px;
+            height: 200px;
+            background-color: #F3518A;
+            border-radius: 50%;
+            position: absolute;
+            top: -100px;
+            left: 100px;
+            transition: 1s;
+            animation: left 4s infinite;
+        }
+        
+        .box3::after {
+            content: '';
+            width: 200px;
+            height: 200px;
+            background-color: #F3518A;
+            border-radius: 50%;
+            position: absolute;
+            right: -100px;
+            bottom: 100px;
+            transition: 1s;
+            animation: right 4s infinite;
+        }
+        /* 关键帧 */
+        
+        @keyframes html {
+            0% {
+                background-color: #F3518A;
+            }
+            50% {
+                background-color: #5EAFBA;
+            }
+            100% {
+                background-color: #F3518A;
+            }
+        }
+        
+        @keyframes left {
+            0% {
+                top: 0;
+                width: 200px;
+                height: 200px;
+                background-color: white;
+            }
+            /* 30% {
+                top: -100px;
+            } */
+            50% {
+                width: 225px;
+                height: 225px;
+                background-color: #F3518A;
+            }
+            /* 70% {
+                top: -100px;
+            } */
+            100% {
+                top: 0;
+                width: 300px;
+                height: 300px;
+                background-color: white;
+            }
+        }
+        
+        @keyframes right {
+            0% {
+                /* 回到圆形 */
+                right: 0;
+                width: 200px;
+                height: 200px;
+                background-color: white;
+            }
+            /* 30% {
+                right: -100px;
+            } */
+            50% {
+                width: 225px;
+                height: 225px;
+                background-color: #F3518A;
+            }
+            /* 70% {
+                right: -100px;
+            } */
+            100% {
+                right: 0;
+                width: 200px;
+                height: 200px;
+                background-color: white;
+            }
+        }
+        
+        @keyframes box3 {
+            0% {
+                /* 白色圆形 */
+                /* transform: rotate(0deg); */
+                /* border-radius: 200px; */
+                width: 200px;
+                height: 200px;
+                background-color: white;
+            }
+            /* 30% {
+                transform: rotate(-45deg);
+                border-radius: 10px;
+            } */
+            50% {
+                height: 225px;
+                width: 225px;
+                background-color: #F3518A;
+            }
+            /* 70% {
+                transform: rotate(-45deg);
+                border-radius: 10px;
+            } */
+            100% {
+                /* transform: rotate(-45deg); */
+                /* border-radius: 200px; */
+                height: 200px;
+                width: 200px;
+                background-color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box3"></div>
+</body>
+
+</html>
