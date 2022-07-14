@@ -12,6 +12,7 @@ console.log(aKeys); // [ 0, 1, 2, 3, 4 ]
 
 console.log(aValues); // [ 1, 2, 3, 4, 5 ]
 
+// 利用解构拆分键值对
 for (const [idx, element] of a.entries()) {
     console.log(`${idx}:${element}`);
 }
