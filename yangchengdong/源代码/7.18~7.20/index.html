@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hehe {
+            position: relative;
+            margin-left: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(15, 216, 69);
+        }
+
+        .ao {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(231, 152, 16);
+        }
+
+        /* div::after {
+            content: 'nihao';
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="nihao hehe">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <!-- <div class="ao"> </div> -->
+    </div>
+    <!-- <textarea name="" id="" cols="30" rows="10">dadadada</textarea> -->
+    <!-- <script src="hd.js"></script> -->
+</body>
+<script>
+    "use strict"
+    let a = document.querySelector('div')
+    let b = document.querySelector('textarea')
+    let chars = [];
+    document.addEventListener('readystatechange', (event) => {
+        // chars.push(event.data)
+        // b.addEventListener('click',()=>{
+
+        if (document.readyState == 'complete' || document.readyState == 'interactive') {
+            document.removeEventListener('readystatechange', arguments.callee)
+            // console.log(arguments.callee);
+        }
+        // })
+
+        // console.log(chars.join(''));
+    })
+</script>
+
+</html>
