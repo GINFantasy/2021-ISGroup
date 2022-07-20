@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springmvc_05_all" />
+        <module name="maven_03_pojp" />
       </profile>
     </annotationProcessing>
   </component>

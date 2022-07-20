@@ -2,12 +2,9 @@ package cn.stopyc.controller;
 
 
 
-import cn.stopyc.config.SpringConfig;
-import cn.stopyc.dao.Result;
 import cn.stopyc.po.User;
 import cn.stopyc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -30,6 +27,7 @@ public class UserController {
     @PostMapping
     public Result<Integer> save(@RequestBody User user) {
         System.out.println(user);
+//        int i = 1/0;
         return userService.login(user.getusername(), user.getPassword());
     }
 }

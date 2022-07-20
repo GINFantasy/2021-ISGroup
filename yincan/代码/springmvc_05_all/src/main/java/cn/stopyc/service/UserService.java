@@ -1,7 +1,6 @@
 package cn.stopyc.service;
 
-import cn.stopyc.dao.Result;
-import org.springframework.transaction.annotation.Transactional;
+import cn.stopyc.controller.Result;
 
 
 public interface UserService {

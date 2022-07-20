@@ -1,5 +1,5 @@
 import cn.stopyc.config.SpringConfig;
-import cn.stopyc.dao.Result;
+import cn.stopyc.controller.Result;
 import cn.stopyc.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
