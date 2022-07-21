@@ -16,11 +16,15 @@
             <li>have a sleep</li>
             <li>make a study</li>
         </ul>
+        <button>插入</button>
     </div>
     <script>
         const content = document.querySelector(`.content`);
-        console.log(content.innerHTML);
-        content.innerHTML = `<p>today is a beautiful day<p>`;
+        const btn = document.querySelector(`button`);
+
+        btn.addEventListener('click', () => {
+            content.innerHTML = `<p>tomorrow is a beautiful day<p>`;
+        })
     </script>
 </body>
 
