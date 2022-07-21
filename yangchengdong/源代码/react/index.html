@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <div id="like_button_container"></div> -->
+    <div id="test"></div>
+    <!-- 加载 React。-->
+    <!-- 注意: 部署时，将 "development.js" 替换为 "production.min.js"。-->
+    <!-- <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script> -->
+    <script type="text/javascript" src="new/react.development.js"></script>
+    <script type="text/javascript" src="new/react-dom.development.js"></script>
+    <script type="text/javascript" src="new/babel.min.js"></script>
+    <script type="text/javascript" src="new/prop-types.js"></script>
+
+    <!-- 加载我们的 React 组件。-->
+    <!-- <script src="like_button.js"></script> -->
+    <script type="text/babel">
+        //创建虚拟DOM
+    //     let h1Name='前端js框架列表'
+    //     let fram1='Angular'
+    //     let fram2='React'
+    //     let fram3='Vue'
+    //     let data=['Angular','React','Vue']
+        
+    //    let VDOM = (
+    //     <div>
+    //         <h1>{h1Name}</h1>
+    //         <ul>
+    //             {data.map((x,index)=><li key={index}>{x}</li>)}
+    //         </ul>
+    //     </div>
+    //    )
+
+    //     ReactDOM.render(VDOM,document.querySelector('#test'))
+
+// function Demo(){
+//     return <h2>我是函数自定义的组件（适用于【简单组件】的定义）</h2>
+// }
+// ReactDOM.render(<Demo/>,document.querySelector('#test'))
+// class Weather extends React.Component {
+//     state={isHot:true};
+//     render(){
+//         return <h2 onClick={this.control}>今天天气很{this.state.isHot?'炎热':'凉爽'}</h2>
+//     }
+//     control=()=>{
+//         this.setState({isHot:!this.state.isHot})
+//     }  
+// }
+// ReactDOM.render(<We/>,document.querySelector('#test'))
+// function control(){
+    
+//     return false;
+// }
+// class Person extends React.Component {
+//     static propTypes={
+//         name:PropTypes.string.isRequired,
+//         speak:PropTypes.func
+//     }
+//     static defaultProps={
+//         sex: '大大'
+//     }
+//     render(){
+//         console.log(this.props);
+//         return (
+//                 <ul>
+//                     <li>name: {this.props.name}</li>
+//                     <li>name: {this.props.sex}</li>
+//                     <li>name: {this.props.age}</li> 
+//                 </ul>
+//               )
+//     }
+// }
+
+// ReactDOM.render(<Person  name='呵呵'  age='18' speak={speak}/>,document.querySelector('#test'))
+// function speak(){
+    
+// }
+
+
+// /
+    // handle_button=()=>{
+    //     // console.log(this.refs.input1);
+    //     const value = this.input1.value;
+    //     if(value){
+    //         alert(value)
+    //     }
+        
+    // }
+    // handle_blur=()=>{
+    //     // console.log(this.refs.input1);
+    //     const value = this.input2.value;
+    //     if(value){
+    //         alert(value)
+    //     }
+        
+    // }
+// }
+// ReactDOM.render(<Demo/>,document.querySelector('#test'))
+// class Demo extends React.Component{
+//     Ref1=React.createRef();
+//     Ref2=React.createRef();
+
+//     handle=()=>{
+//         alert('账号：'+this.Ref1.current.value+' 密码: '+this.Ref2.current.value)
+//     }
+//     change=(e)=>{
+//         const type=e.target.type;
+//         const value=e.target.value;
+//         console.log(type);
+//         this.setState({[type]:value})
+
+//         // console.log(e.target.type);
+//     }
+//     render(){
+//         return(
+//             <div>用户名：
+//                <input ref={this.Ref1} onChange={this.change} type="text"/>&nbsp; 
+//                   密码：
+//                 <input ref={this.Ref2} onChange={this.change} type="password" name="" id=""/>&nbsp; 
+//                 <button onClick={this.handle}>提交</button>
+//             </div>
+//         )
+//     }
+// }
+// ReactDOM.render(<Demo/>,document.querySelector('#test'))
+
+class Life extends React.Component{
+    state={opacity:1}
+    Delete=()=>{
+        ReactDOM.unmountComponentAtNode(document.querySelector('#test'))
+        // console.log(Interval);
+        clearInterval(this.timer);
+    }
+    
+    fade=()=>{
+        // let {opacity}=this.state;
+        //     if(opacity>=0){
+        //         // this.state.opacity-=0.1;
+        //         this.setState({opacity:opacity-0.1})
+        //         // console.log(this.state.opacity);
+        //     }
+        //     else{
+        //         this.setState({opacity:1})
+        //     }
+        
+    }
+    // shouldComponentUpdate(e){
+    //     console.log(e);
+    //     return false
+    // }
+    componentDidMount(){
+        // console.log('nihao');
+      this.timer=  setInterval(this.fade,200)
+       
+    }
+    render(){
+         return(
+            <div>
+                <h1 style={{opacity:this.state.opacity}}>React学不会,咋办</h1>
+                <button onClick={this.Delete}>不活了</button>
+            </div>
+       )
+    }
+}
+ReactDOM.render(<Life/>,document.querySelector('#test'))
+</script>
+
+</body>
+
+</html>
